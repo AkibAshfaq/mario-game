@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mario Run</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+
+  <main class="container">
+    <header class="game-page-header">
+      <h1>🍄 Mario Run</h1>
+      <p>Collect coins · Stomp enemies · Reach the flag</p>
+    </header>
+
+    <div class="game-card-wrap">
+      <div class="hud">
+        <span>🪙 <strong id="score">0</strong></span>
+        <span>Best: <strong id="hi-score">0</strong></span>
+        <span id="lives">❤️❤️❤️</span>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="canvas" width="800" height="400"></canvas>
+
+        <div class="overlay" id="overlay">
+          <span class="overlay-icon">🍄</span>
+          <p class="overlay-title" id="overlay-title">Mario Run</p>
+          <p class="overlay-hint" id="overlay-hint">Collect coins · Stomp enemies · Reach the flag</p>
+          <button class="overlay-btn" id="start-btn">Play</button>
+        </div>
+      </div>
+
+      <!-- Mobile controls -->
+      <div class="mobile-controls">
+        <button class="ctrl-btn" id="btn-left"  aria-label="Move left">◀</button>
+        <button class="ctrl-btn jump" id="btn-jump" aria-label="Jump">▲</button>
+        <button class="ctrl-btn" id="btn-right" aria-label="Move right">▶</button>
+      </div>
+
+      <p class="hint" id="desktop-hint">Arrow keys / WASD · Space or ↑ to jump</p>
+    </div>
+  </main>
+
+  <script type="module" src="/src/mario.ts"></script>
+</body>
+</html>
