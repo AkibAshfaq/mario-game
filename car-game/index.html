@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Road Rush — a top-down 2D car dodging game. Survive traffic, rack up distance, beat your record." />
+    <title>Road Rush — Car Game</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>🚗</text></svg>" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <span class="game-title">🚗 Road Rush</span>
+      <div class="header-right">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <!-- HUD -->
+    <div class="hud">
+      <div class="hud-group">
+        <span class="hud-label">Distance</span>
+        <span class="hud-value" id="score-display">0 m</span>
+      </div>
+
+      <div class="hud-group">
+        <span class="hud-label">Speed</span>
+        <div class="speed-bar-wrap">
+          <div class="speed-bar-fill" id="speed-fill" style="width: 4%;"></div>
+        </div>
+      </div>
+
+      <div class="hud-group">
+        <span class="hud-label">Lives</span>
+        <span class="lives-display" id="lives-display">❤️❤️❤️</span>
+      </div>
+
+      <div class="hud-group">
+        <span class="hud-label">Best</span>
+        <span class="hud-value" id="best-display">0 m</span>
+      </div>
+    </div>
+
+    <!-- Canvas -->
+    <div class="canvas-wrap">
+      <canvas id="game-canvas" width="400" height="620"></canvas>
+
+      <!-- Overlay (idle / game over) -->
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">🚗 Road Rush</h2>
+        <div id="overlay-msg">
+          <span class="sub">Dodge traffic and survive as long as you can!</span>
+        </div>
+        <button id="btn-play" class="btn-play">Start Game</button>
+        <span class="controls-hint">← → or A / D to change lanes · Swipe on mobile</span>
+      </div>
+    </div>
+
+    <!-- Mobile controls -->
+    <div class="mobile-controls">
+      <button id="btn-left" class="ctrl-btn" aria-label="Move left">◀</button>
+      <button id="btn-right" class="ctrl-btn" aria-label="Move right">▶</button>
+    </div>
+
+    <footer>Built with TypeScript + Canvas · <a href="https://github.com/AkibAshfaq/car-game" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Source</a></footer>
+
+    <script type="module" src="/src/car.ts"></script>
+  </body>
+</html>
