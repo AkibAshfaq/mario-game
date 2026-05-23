@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+
+  <main class="container">
+    <header class="game-page-header">
+      <h1>🐍 Snake</h1>
+      <p>Eat the food, grow longer — don't hit the walls or yourself.</p>
+    </header>
+
+    <div class="game-card-wrap">
+      <div class="hud">
+        <span>Score: <strong id="score">0</strong></span>
+        <span>Best: <strong id="hi-score">0</strong></span>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="canvas" width="400" height="400"></canvas>
+
+        <div class="overlay" id="overlay">
+          <span class="overlay-icon" id="overlay-icon">🐍</span>
+          <p class="overlay-title" id="overlay-title">Snake</p>
+          <p class="overlay-hint" id="overlay-hint">Arrow keys / WASD · Swipe on mobile</p>
+          <button class="overlay-btn" id="start-btn">Start Game</button>
+        </div>
+      </div>
+
+      <p class="hint">Arrow keys / WASD on desktop &nbsp;·&nbsp; Swipe on mobile</p>
+    </div>
+  </main>
+
+  <script type="module" src="/src/snake.ts"></script>
+</body>
+</html>
